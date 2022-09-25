@@ -1,0 +1,73 @@
+@import './colors';
+@import './utilities';
+@import './button';
+
+body {
+  background: $very-dark-blue;
+  font-family: Overpass;
+  font-size: $font-text;
+  line-height: 1.6;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: $dark-blue;
+  color: $white;
+  border-radius: 30px;
+  max-width: 350px;
+  padding: 50px;
+}
+
+.card-title {
+  font-weight: $font-bold;
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+.card-body,
+ul {
+  color: $light-grey;
+  list-style: none;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 25px 0;
+}
+
+.rounded {
+  border-radius: 50%;
+  background-color: $med-dark-blue;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul .rounded,
+button {
+  cursor: pointer;
+}
+
+li:hover {
+  background: $orange;
+  color: $white;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+input[type='radio']:checked {
+  background: $medium-grey;
+  color: $white;
+}
