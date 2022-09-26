@@ -15,39 +15,54 @@
   </head>
   <body>
     <main>
-      <section class="card">
-        <div class="rounded">
-          <img src="./images/icon-star.svg" alt="" />
-        </div>
-        <h1 class="card-title">How did we do?</h1>
-        <p class="card-body">
-          Please let us know how we did with your support request. All feedback
-          is appreciated to help us imporve our offering!
-        </p>
-        <ul>
-          <li class="rounded rate">
-            <input type="radio" name="rate" id="rate1" value="rate1" />
-            <label for="rate1">1</label>
-          </li>
-          <li class="rounded rate">
-            <input type="radio" name="rate" id="rate2" value="rate2" />
-            <label for="rate2">2</label>
-          </li>
-          <li class="rounded rate">
-            <input type="radio" name="rate" id="rate3" value="rate3" />
-            <label for="rate3">3</label>
-          </li>
-          <li class="rounded rate">
-            <input type="radio" name="rate" id="rate4" value="rate4" />
-            <label for="rate4">4</label>
-          </li>
-          <li class="rounded rate">
-            <input type="radio" name="rate" id="rate5" value="rate5" />
-            <label for="rate5">5</label>
-          </li>
-        </ul>
-        <button type="submit">Submit</button>
-      </section>
+      <div id="rate-card" class="">
+        <section class="card">
+          <div class="rounded">
+            <img src="./images/icon-star.svg" alt="" />
+          </div>
+          <h1 class="card-title">How did we do?</h1>
+          <p class="card-body">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us imporve our offering!
+          </p>
+          <ul>
+            <li class="rounded rate" onclick="changeStyle(this.textContent)">
+              1
+            </li>
+            <li class="rounded rate" onclick="changeStyle(this.textContent)">
+              2
+            </li>
+            <li class="rounded rate" onclick="changeStyle(this.textContent)">
+              3
+            </li>
+            <li class="rounded rate" onclick="changeStyle(this.textContent)">
+              4
+            </li>
+            <li class="rounded rate" onclick="changeStyle(this.textContent)">
+              5
+            </li>
+          </ul>
+          <button onclick="submitHandler()">Submit</button>
+        </section>
+      </div>
+
+      <div id="result" class="hide">
+        <section class="card text-center">
+          <img
+            src="./images/illustration-thank-you.svg"
+            alt="phone with credit card and circle"
+            class="thank-you-image"
+          />
+          <div>
+            <p class="label"></p>
+          </div>
+          <h1 class="card-title">Thank you!</h1>
+          <p class="card-body">
+            We apprecite you taking the time to give a rating. If you ever need
+            more support, don't hesistate to get in touch!
+          </p>
+        </section>
+      </div>
     </main>
     <script src="main.js"></script>
   </body>

@@ -71,3 +71,16 @@ input[type='radio']:checked {
   background: $medium-grey;
   color: $white;
 }
+
+.label {
+  display: inline-block;
+  border-radius: 30px;
+  color: $orange;
+  background: $med-dark-blue;
+  margin: 10px 0;
+  padding: 5px 15px;
+}
+
+.thank-you-image {
+  margin-bottom: 15px;
+}
