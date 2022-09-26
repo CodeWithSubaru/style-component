@@ -1,0 +1,62 @@
+@import 'colors';
+@import 'typography';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $dark-blue;
+  font-family: Manrope, sans-serif;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100vh;
+  color: $light-cyan;
+}
+
+.card {
+  max-width: 500px;
+  line-height: 1.6;
+  border-radius: 10px;
+  margin: 0 auto;
+  background: $dark-grayish-blue;
+  text-align: center;
+  padding: 30px 70px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: inherit;
+
+  & small {
+    color: $neon-green;
+    margin: 15px 0 25px;
+    font-weight: 500;
+  }
+
+  & #generated-text {
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 800;
+  }
+
+  &-divider {
+    margin: 15px 0;
+  }
+
+  & button {
+    border-radius: 100px;
+    outline: none;
+    border: none;
+    background: $neon-green;
+    width: fit-content;
+    padding: 15px;
+    position: relative;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
