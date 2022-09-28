@@ -1,0 +1,94 @@
+@import "colors";
+@import "typography";
+@import "utilities";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-size;
+}
+
+main {
+  font-family: $font-family;
+  background: $very-dark-blue-body;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.card {
+  background: $very-dark-blue-card;
+  width: 350px;
+  padding: 25px;
+  border-radius: 10px;
+
+  & &-title {
+    font-size: inherit;
+  }
+
+  & &-image {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .image-container {
+    height: auto;
+    position: relative;
+
+    &:hover .image-overlay {
+      background-image: url(../../images/icon-view.svg);
+      background-color: rgba(255, 255, 255, 0.3);
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 98%;
+      width: 100%;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  }
+
+  & &-title {
+    margin-bottom: 20px;
+
+    &__light {
+      color: $cyan;
+    }
+  }
+
+  &-text-light {
+    font-weight: $font-w-light;
+  }
+
+  .avatar {
+    margin-top: 20px;
+
+    & .image-avatar {
+      width: 30px;
+      border: 1px solid $white;
+      border-radius: 100%;
+    }
+  }
+}
+
+.attribution {
+  font-size: inherit;
+  text-align: center;
+  color: $cyan;
+
+  & a {
+    color: hsl(228, 45%, 44%);
+  }
+}

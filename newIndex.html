@@ -1,0 +1,34 @@
+<form onsubmit="optionOverride()">
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" onchange="showInputText(this.value)">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="others">Others</option>
+  </select>
+
+  <br />
+
+  <input type="text" style="display: none" id="otherCar" name="otherCar" />
+
+  <input type="submit" />
+</form>
+
+<script>
+  element = document.getElementById("otherCar");
+
+  function showInputText(val) {
+    if (val == "others") {
+      element.style.display = "block";
+      val = element.value;
+      return val;
+    } else {
+      alert(val);
+    }
+  }
+
+  function optionOverride(e) {
+    e.preventDefault();
+    console.log(val);
+  }
+</script>
