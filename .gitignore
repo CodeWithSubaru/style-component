@@ -17,3 +17,4 @@ design
 sass
 node_modules
 *.md
+.netlify
