@@ -24,7 +24,8 @@ body {
   --content: minmax(14rem, 20rem);
   font-size: var(--font-size);
   font-family: 'Poppins', sans-serif;
-  color: var(--accent-grayish-blue); }
+  color: var(--accent-grayish-blue);
+  background-color: var(--accent-very-light-gray); }
 
 .features {
   /* Font Weight */
@@ -47,7 +48,7 @@ body {
   .feature-text__title {
     font-weight: var(--font-w-light);
     color: var(--accent-dark-blue);
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 2rem; }
     .feature-text__title strong {
       display: block;
