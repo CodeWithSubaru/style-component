@@ -1,0 +1,132 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --font-w-m: 500;
+  --font-w-b: 700;
+  --font-w-bldr: 900;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
+  height: 100vh;
+  line-height: 1.6;
+}
+
+.card {
+  border-radius: 2rem;
+  overflow: hidden;
+}
+@media screen and (max-width: 40em) {
+  .card {
+    display: inline-block;
+    min-width: 35rem;
+  }
+}
+
+.order-payment-image {
+  background-image: url(../images/illustration-hero.svg);
+  background-size: cover;
+  background-position: center;
+  height: 22rem;
+}
+@media screen and (max-width: 40em) {
+  .order-payment-image {
+    width: 35rem;
+  }
+}
+.order-payment-info {
+  padding: 3rem;
+  text-align: center;
+  width: 45rem;
+  background-color: var(--very-pale-blue);
+  color: var(--desaturated-blue);
+}
+@media screen and (max-width: 40em) {
+  .order-payment-info {
+    width: 35rem;
+  }
+}
+.order-payment-info__title {
+  font-weight: var(--font-w-bldr);
+  color: var(--dark-blue);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.order-payment-info__description {
+  margin-bottom: 1rem;
+}
+.order-payment-info__pill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(224, 232, 255, 0.3);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+}
+.order-payment-info__pill-container {
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+}
+.order-payment-info__pill-title {
+  color: var(--dark-blue);
+}
+.order-payment-info__pill-action {
+  font-weight: var(--font-w-bldr);
+  color: var(--bright-blue);
+}
+.order-payment-info__pill-action:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.btn {
+  display: flex;
+  border: none;
+  background-color: var(--btn-bg-clr);
+  display: block;
+  width: 100%;
+  color: #fff;
+  padding: 2rem 0;
+  border-radius: 1rem;
+  font-family: inherit;
+  font-weight: var(--font-w-b);
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn--primary {
+  --btn-bg-clr: var(--bright-blue);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.btn--primary:hover {
+  opacity: 0.7;
+  --btn-bg-clr: var(--bright-blue);
+}
+.btn--secondary {
+  color: var(--desaturated-blue);
+  font-weight: var(--font-w-bldr);
+}
+.btn--secondary:hover {
+  color: var(--dark-blue);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="order-payment-image"></div>
+      <div class="order-payment-info">
+        <h2 class="order-payment-info__title">Order Summary</h2>
+        <p class="order-payment-info__description">
+          You can now listen to millions of songs, audiobooks, and podcasts on
+          any device anywhere you like!
+        </p>
+        <div class="order-payment-info__pill">
+          <div class="order-payment-info__pill-container">
+            <div class="order-payment-info__pill-image">
+              <img src="./images/icon-music.svg" alt="" />
+            </div>
+            <div class="order-payment-info__pill-text">
+              <h4 class="order-payment-info__pill-title">Annual Plan</h4>
+              <p class="order-payment-info__pill-price">$59.99/year</p>
+            </div>
+          </div>
+          <a href="" class="order-payment-info__pill-action">Change</a>
+        </div>
+        <button class="btn btn--primary">Proceed to Payment</button>
+        <a href="" class="btn btn--secondary"> Cancel Order</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "order-summary-component-main",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "watch:sass": "sass ./sass/main.scss ./styles/style.css -w",
+    "dev": "live-server"
+  },
+  "dependencies": {
+    "sass": "^1.56.1"
+  }
+}
