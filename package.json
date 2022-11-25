@@ -9,6 +9,7 @@
     "watch": "sass ./sass/main.scss ./styles/style.css -w"
   },
   "dependencies": {
+    "netlify-cli": "^12.2.7",
     "sass": "^1.56.1",
     "vue": "^3.2.36"
   },
