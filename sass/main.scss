@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%); //(background, headings, buttons)
+
+  --font-family-head: 'Big Shoulders Display', cursive;
+  --font-family-text: 'Lexend Deca', sans-serif;
+
+  --font-w-400: 400;
+  --font-w-700: 700;
+
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 2;
+}
+
+#app {
+  margin: 0 auto;
+  max-width: 110rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 60vh;
+  padding: 2rem;
+
+  @media screen and (max-width: 800px) {
+    max-width: 45rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+  }
+}
+
+@mixin num() {
+  &--1 {
+    --clr: var(--bright-orange);
+    --br-tl: 1rem;
+    --br-bl: 1rem;
+
+    @media screen and (max-width: 800px) {
+      --br-bl: 0;
+      border-top-right-radius: 1rem;
+    }
+  }
+
+  &--2 {
+    --clr: var(--dark-cyan);
+  }
+
+  &--3 {
+    --clr: var(--very-dark-cyan);
+    --br-tr: 1rem;
+    --br-br: 1rem;
+
+    @media screen and (max-width: 800px) {
+      --br-tr: 0;
+      border-bottom-left-radius: 1rem;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+  background-color: var(--clr);
+  padding: 5rem;
+  color: var(--transparent-white);
+  font-family: var(--font-family-text);
+  border-top-left-radius: var(--br-tl);
+  border-bottom-left-radius: var(--br-bl);
+  border-top-right-radius: var(--br-tr);
+  border-bottom-right-radius: var(--br-br);
+
+  & img {
+    width: 6.5rem;
+  }
+
+  & h1 {
+    line-height: 1;
+    color: var(--very-light-gray);
+    font-family: var(--font-family-head);
+    font-size: 4rem;
+    font-weight: var(--font-w-700);
+  }
+
+  @include num;
+}
+
+.btn {
+  margin-top: auto;
+  align-self: flex-start;
+  border: none;
+  background-color: var(--very-light-gray);
+  color: var(--clr);
+  font-size: 1.8rem;
+  font-weight: var(--font-w-700);
+  letter-spacing: 0.1rem;
+  padding: 2rem 5rem;
+  border-radius: 5rem;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 3px solid var(--very-light-gray);
+
+  @include num;
+
+  &:hover {
+    background-color: var(--clr);
+    color: var(--very-light-gray);
+  }
+
+  @media screen and (max-width: 800px) {
+    padding: 1.8rem 4rem;
+  }
+}
