@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <div
+  <article
     class="card"
     v-for="info of data"
     :key="info.id"
@@ -20,5 +20,5 @@ export default {
     <button-component :type="info.btnType" :btn="info.id"
       >Learn More
     </button-component>
-  </div>
+  </article>
 </template>

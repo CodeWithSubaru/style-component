@@ -107,6 +107,7 @@ body {
   white-space: nowrap;
   cursor: pointer;
   border: 3px solid var(--very-light-gray);
+  transition: all 0.2s;
 }
 .btn--1 {
   --clr: var(--bright-orange);
